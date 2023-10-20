@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,9 @@
             this.mnuBCDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTroGiup = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHienTroGiup = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,7 +62,7 @@
             this.mnuTroGiup});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(692, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(510, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -93,21 +96,21 @@
             // mnuNhanVien
             // 
             this.mnuNhanVien.Name = "mnuNhanVien";
-            this.mnuNhanVien.Size = new System.Drawing.Size(172, 26);
+            this.mnuNhanVien.Size = new System.Drawing.Size(224, 26);
             this.mnuNhanVien.Text = "&Nhân Viên";
             this.mnuNhanVien.Click += new System.EventHandler(this.mnuNhanVien_Click);
             // 
             // mnuKhachHang
             // 
             this.mnuKhachHang.Name = "mnuKhachHang";
-            this.mnuKhachHang.Size = new System.Drawing.Size(172, 26);
+            this.mnuKhachHang.Size = new System.Drawing.Size(224, 26);
             this.mnuKhachHang.Text = "&Khách Hàng";
             this.mnuKhachHang.Click += new System.EventHandler(this.mnuKhachHang_Click);
             // 
             // mnuHangHoa
             // 
             this.mnuHangHoa.Name = "mnuHangHoa";
-            this.mnuHangHoa.Size = new System.Drawing.Size(172, 26);
+            this.mnuHangHoa.Size = new System.Drawing.Size(224, 26);
             this.mnuHangHoa.Text = "&Hàng Hóa";
             this.mnuHangHoa.Click += new System.EventHandler(this.mnuHangHoa_Click);
             // 
@@ -137,7 +140,7 @@
             // mnuFindHoaDon
             // 
             this.mnuFindHoaDon.Name = "mnuFindHoaDon";
-            this.mnuFindHoaDon.Size = new System.Drawing.Size(172, 26);
+            this.mnuFindHoaDon.Size = new System.Drawing.Size(152, 26);
             this.mnuFindHoaDon.Text = "Hoá Đơn";
             this.mnuFindHoaDon.Click += new System.EventHandler(this.mnuFindHoaDon_Click);
             // 
@@ -174,21 +177,37 @@
             // mnuHienTroGiup
             // 
             this.mnuHienTroGiup.Name = "mnuHienTroGiup";
-            this.mnuHienTroGiup.Size = new System.Drawing.Size(148, 26);
+            this.mnuHienTroGiup.Size = new System.Drawing.Size(224, 26);
             this.mnuHienTroGiup.Text = "Trợ Giúp";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::QUANLYQUANAO.Properties.Resources.iconQuanLyQuanAo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(510, 430);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 450);
+            this.ClientSize = new System.Drawing.Size(510, 458);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chương Trình Quản Lý Cửa Hàng Quần Áo";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +231,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuBCDoanhThu;
         private System.Windows.Forms.ToolStripMenuItem mnuTroGiup;
         private System.Windows.Forms.ToolStripMenuItem mnuHienTroGiup;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

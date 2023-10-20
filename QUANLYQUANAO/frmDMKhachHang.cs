@@ -210,10 +210,5 @@ namespace QUANLYQUANAO
             btnLuu.Enabled = false;
             txtMaKhach.Enabled = false;
         }
-
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

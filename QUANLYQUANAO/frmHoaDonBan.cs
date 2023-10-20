@@ -20,7 +20,7 @@ namespace QUANLYQUANAO
             InitializeComponent();
         }
 
-        DataTable tblCTHDB; //Bảng chi tiết hoá đơn bán
+        private DataTable ChiTietHDBan; //Bảng chi tiết hoá đơn bán
 
        
         private void frmHoaDonBan_Load(object sender, EventArgs e)
@@ -63,9 +63,9 @@ namespace QUANLYQUANAO
            
             string sql;
             sql = "SELECT* FROM [dbo].[HoaDonBan]";
-            sql = "SELECT a.MaHang, b.TenHang, a.SoLuong, b.DonGiaBan, a.GiamGia,a.ThanhTien FROM ChiTietHoaDonBan AS a, Hang AS b WHERE a.MaHDBan = N'" + txtMaHDBan.Text + "' AND a.MaHang=b.MaHang";
-            tblCTHDB = Fuctions.GetDataToTable(sql);
-            dgvHoaDonBanHang.DataSource = tblCTHDB;
+            sql = "SELECT a.MaHang, b.TenHang, a.SoLuong, b.DonGiaBan, a.GiamGia,a.ThanhTien FROM ChiTietHDBan AS a, Hang AS b WHERE a.MaHDBan = N'" + txtMaHDBan.Text + "' AND a.MaHang=b.MaHang";
+            ChiTietHDBan = Fuctions.GetDataToTable(sql);
+            dgvHoaDonBanHang.DataSource = ChiTietHDBan;
             dgvHoaDonBanHang.Columns[0].HeaderText = "Mã hàng";
             dgvHoaDonBanHang.Columns[1].HeaderText = "Tên hàng";
             dgvHoaDonBanHang.Columns[2].HeaderText = "Số lượng";
@@ -92,7 +92,6 @@ namespace QUANLYQUANAO
             cbMaKhachHang.Text = Fuctions.GetFieldValues(str);
             str = "SELECT TongTien FROM HoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             txtTongTien.Text = Fuctions.GetFieldValues(str);
-            lblBangChu.Text = "Bằng chữ: " + Fuctions.ChuyenSoSangChu(txtTongTien.Text);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -112,7 +111,6 @@ namespace QUANLYQUANAO
             cbMaNhanVien.Text = "";
             cbMaKhachHang.Text = "";
             txtTongTien.Text = "0";
-            lblBangChu.Text = "Bằng chữ: ";
             cbMaHang.Text = "";
             txtSoLuong.Text = "";
             txtGiamGia.Text = "0";
@@ -177,7 +175,7 @@ namespace QUANLYQUANAO
                 txtGiamGia.Focus();
                 return;
             }
-            sql = "SELECT MaHang FROM ChiTietHoaDonBan WHERE MaHang=N'" + cbMaHang.SelectedValue + "' AND MaHDBan = N'" + txtMaHDBan.Text.Trim() + "'";
+            sql = "SELECT MaHang FROM ChiTietHDBan WHERE MaHang=N'" + cbMaHang.SelectedValue + "' AND MaHDBan = N'" + txtMaHDBan.Text.Trim() + "'";
             if (Fuctions.CheckKey(sql))
             {
                 MessageBox.Show("Mã hàng này đã có, bạn phải nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -194,7 +192,7 @@ namespace QUANLYQUANAO
                 txtSoLuong.Focus();
                 return;
             }
-            sql = "INSERT INTO ChiTietHoaDonBan (MaHDBan,MaHang,SoLuong,DonGia, GiamGia,ThanhTien) VALUES(N'" + txtMaHDBan.Text.Trim() + "',N'" + cbMaHang.SelectedValue + "'," + txtSoLuong.Text + "," + txtDonGiaBan.Text + "," + txtGiamGia.Text + "," + txtThanhTien.Text + ")";
+            sql = "INSERT INTO ChiTietHDBan (MaHDBan,MaHang,SoLuong,DonGia, GiamGia,ThanhTien) VALUES(N'" + txtMaHDBan.Text.Trim() + "',N'" + cbMaHang.SelectedValue + "'," + txtSoLuong.Text + "," + txtDonGiaBan.Text + "," + txtGiamGia.Text + "," + txtThanhTien.Text + ")";
             Fuctions.RunSQL(sql);
             LoadDataGridView();
             // Cập nhật lại số lượng của mặt hàng vào bảng tblHang
@@ -207,7 +205,6 @@ namespace QUANLYQUANAO
             sql = "UPDATE HoaDonBan SET TongTien =" + Tongmoi + " WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
             Fuctions.RunSQL(sql);
             txtTongTien.Text = Tongmoi.ToString();
-            lblBangChu.Text = "Bằng chữ: " + Fuctions.ChuyenSoSangChu(Tongmoi.ToString());
             ResetValuesHang();
             btnHuy.Enabled = true;
             btnThem.Enabled = true;
@@ -218,7 +215,7 @@ namespace QUANLYQUANAO
         {
             string MaHangxoa, sql;
             Double ThanhTienxoa, SoLuongxoa, sl, slcon, tong, tongmoi;
-            if (tblCTHDB.Rows.Count == 0)
+            if (ChiTietHDBan.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -229,7 +226,7 @@ namespace QUANLYQUANAO
                 MaHangxoa = dgvHoaDonBanHang.CurrentRow.Cells["MaHang"].Value.ToString();
                 SoLuongxoa = Convert.ToDouble(dgvHoaDonBanHang.CurrentRow.Cells["SoLuong"].Value.ToString());
                 ThanhTienxoa = Convert.ToDouble(dgvHoaDonBanHang.CurrentRow.Cells["ThanhTien"].Value.ToString());
-                sql = "DELETE ChiTietHoaDonBan WHERE MaHDBan=N'" + txtMaHDBan.Text + "' AND MaHang = N'" + MaHangxoa + "'";
+                sql = "DELETE ChiTietHDBan WHERE MaHDBan=N'" + txtMaHDBan.Text + "' AND MaHang = N'" + MaHangxoa + "'";
                 Fuctions.RunSQL(sql);
                 // Cập nhật lại số lượng cho các mặt hàng
                 sl = Convert.ToDouble(Fuctions.GetFieldValues("SELECT SoLuong FROM Hang WHERE MaHang = N'" + MaHangxoa + "'"));
@@ -242,7 +239,6 @@ namespace QUANLYQUANAO
                 sql = "UPDATE HoaDonBan SET TongTien =" + tongmoi + " WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
                 Fuctions.RunSQL(sql);
                 txtTongTien.Text = tongmoi.ToString();
-                lblBangChu.Text = "Bằng chữ: " + Fuctions.ChuyenSoSangChu(tongmoi.ToString());
                 LoadDataGridView();
             }
 
@@ -253,7 +249,7 @@ namespace QUANLYQUANAO
             double sl, slcon, slxoa;
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string sql = "SELECT MaHang,SoLuong FROM ChiTietHoaDonBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
+                string sql = "SELECT MaHang,SoLuong FROM ChiTietHDBan WHERE MaHDBan = N'" + txtMaHDBan.Text + "'";
                 DataTable tblHang = Fuctions.GetDataToTable(sql);
                 for (int hang = 0; hang <= tblHang.Rows.Count - 1; hang++)
                 {
@@ -266,7 +262,7 @@ namespace QUANLYQUANAO
                 }
 
                 //Xóa chi tiết hóa đơn
-                sql = "DELETE ChiTietHoaDonBan WHERE MaHDBan=N'" + txtMaHDBan.Text + "'";
+                sql = "DELETE ChiTietHDBan WHERE MaHDBan=N'" + txtMaHDBan.Text + "'";
                 Fuctions.RunSqlDel(sql);
 
                 //Xóa hóa đơn

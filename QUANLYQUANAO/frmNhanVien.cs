@@ -14,7 +14,7 @@ namespace QUANLYQUANAO
 {
     public partial class frmNhanVien : Form
     {
-        private DataTable tblNV;
+        private DataTable NhanVien;
         public frmNhanVien()
         {
             InitializeComponent();
@@ -32,8 +32,8 @@ namespace QUANLYQUANAO
         {
             string sql;
             sql = "SELECT* FROM [dbo].[NhanVien]";
-            tblNV = Fuctions.GetDataToTable(sql); //lấy dữ liệu
-            dgvNhanVien.DataSource = tblNV;
+            NhanVien = Fuctions.GetDataToTable(sql); //lấy dữ liệu
+            dgvNhanVien.DataSource = NhanVien;
             dgvNhanVien.Columns[0].HeaderText = "Mã nhân viên";
             dgvNhanVien.Columns[1].HeaderText = "Tên nhân viên";
             dgvNhanVien.Columns[2].HeaderText = "Giới tính";
@@ -58,15 +58,23 @@ namespace QUANLYQUANAO
                 txtMaNhanVien.Focus();
                 return;
             }
-            if (tblNV.Rows.Count == 0)
+            if (NhanVien.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             txtMaNhanVien.Text = dgvNhanVien.CurrentRow.Cells["MaNhanVien"].Value.ToString();
             txtTenNhanVien.Text = dgvNhanVien.CurrentRow.Cells["TenNhanVien"].Value.ToString();
-            if (dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam") chkGioiTinhNam.Checked = true;
-            else chkGioiTinhNam.Checked = false;
+            //if (dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam") rdoGioiTinhNam.Checked = true;
+            //else rdoGioiTinhNam.Checked = false;
+            if (dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nam")
+            {
+                rdoGioiTinhNam.Checked = true;
+            }
+            if (dgvNhanVien.CurrentRow.Cells["GioiTinh"].Value.ToString() == "Nu")
+            {
+                rdoGioiTinhNu.Checked = true;
+            }
             txtDiaChi.Text = dgvNhanVien.CurrentRow.Cells["DiaChi"].Value.ToString();
             txtSDT.Text = dgvNhanVien.CurrentRow.Cells["DienThoai"].Value.ToString();
             dtpNgaySinh.Text = dgvNhanVien.CurrentRow.Cells["NgaySinh"].Value.ToString();
@@ -78,7 +86,7 @@ namespace QUANLYQUANAO
         {
             txtMaNhanVien.Text = "";
             txtTenNhanVien.Text = "";
-            chkGioiTinhNam.Checked = false;
+            rdoGioiTinhNam.Checked = false;
             txtDiaChi.Text = "";
             dtpNgaySinh.Text = "";
             txtSDT.Text = "";
@@ -128,14 +136,14 @@ namespace QUANLYQUANAO
                 dtpNgaySinh.Focus();
                 return;
             }
-          /*  if (!Fuctions.IsDate(dtpNgaySinh.Text))
-            {
-                MessageBox.Show("Bạn phải nhập lại ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                // mskNgaySinh.Text = "";
-                dtpNgaySinh.Focus();
-                return;
-            }*/
-            if (chkGioiTinhNam.Checked == true)
+            /*  if (!Fuctions.IsDate(dtpNgaySinh.Text))
+              {
+                  MessageBox.Show("Bạn phải nhập lại ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  // mskNgaySinh.Text = "";
+                  dtpNgaySinh.Focus();
+                  return;
+              }*/
+            if (rdoGioiTinhNam.Checked == true)
                 gt = "Nam";
             else
                 gt = "Nữ";
@@ -162,7 +170,7 @@ namespace QUANLYQUANAO
         private void btnXoa_Click(object sender, EventArgs e)
         {
             string sql;
-            if (tblNV.Rows.Count == 0)
+            if (NhanVien.Rows.Count == 0)
             {
                 MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -184,14 +192,14 @@ namespace QUANLYQUANAO
         private void btnSua_Click(object sender, EventArgs e)
         {
             string sql, gt;
-            if (tblNV.Rows.Count == 0)
+            if (NhanVien.Rows.Count == 0)
             {
                 MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (txtMaNhanVien.Text == "")
             {
-                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn thông tin nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (txtTenNhanVien.Text.Trim().Length == 0)
@@ -225,7 +233,7 @@ namespace QUANLYQUANAO
                 dtpNgaySinh.Focus();
                 return;
             }
-            if (chkGioiTinhNam.Checked == true)
+            if (rdoGioiTinhNam.Checked == true)
                 gt = "Nam";
             else
                 gt = "Nữ";

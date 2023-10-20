@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyCuaHangQuanAoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChiTietHDBan">
+    <Key>
+      <PropertyRef Name="MaHDBan" />
+      <PropertyRef Name="MaHang" />
+    </Key>
+    <Property Name="MaHDBan" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="MaHang" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SoLuong" Type="float" Nullable="false" />
+    <Property Name="DonGia" Type="float" Nullable="false" />
+    <Property Name="GiamGia" Type="float" Nullable="false" />
+    <Property Name="Thanhtien" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hang">
+    <Key>
+      <PropertyRef Name="MaHang" />
+    </Key>
+    <Property Name="MaHang" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenHang" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SoLuong" Type="float" Nullable="false" />
+    <Property Name="DonGiaNhap" Type="float" Nullable="false" />
+    <Property Name="DonGiaBan" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoaDonBan">
+    <Key>
+      <PropertyRef Name="MaHDBan" />
+    </Key>
+    <Property Name="MaHDBan" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="MaNhanVien" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NgayBan" Type="datetime" Nullable="false" />
+    <Property Name="MaKhach" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TongTien" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Khach">
+    <Key>
+      <PropertyRef Name="MaKhach" />
+    </Key>
+    <Property Name="MaKhach" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenKhach" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DienThoai" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenNhanVien" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Dienthoai" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_ChiTietHDBan_Hang">
+    <End Role="Hang" Type="Self.Hang" Multiplicity="1" />
+    <End Role="ChiTietHDBan" Type="Self.ChiTietHDBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hang">
+        <PropertyRef Name="MaHang" />
+      </Principal>
+      <Dependent Role="ChiTietHDBan">
+        <PropertyRef Name="MaHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietHDBan_HoaDonBan">
+    <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="1" />
+    <End Role="ChiTietHDBan" Type="Self.ChiTietHDBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDonBan">
+        <PropertyRef Name="MaHDBan" />
+      </Principal>
+      <Dependent Role="ChiTietHDBan">
+        <PropertyRef Name="MaHDBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDonBan_Khach">
+    <End Role="Khach" Type="Self.Khach" Multiplicity="1" />
+    <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Khach">
+        <PropertyRef Name="MaKhach" />
+      </Principal>
+      <Dependent Role="HoaDonBan">
+        <PropertyRef Name="MaKhach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDonBan_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="HoaDonBan">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyCuaHangQuanAoModelStoreContainer">
+    <EntitySet Name="ChiTietHDBan" EntityType="Self.ChiTietHDBan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hang" EntityType="Self.Hang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoaDonBan" EntityType="Self.HoaDonBan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Khach" EntityType="Self.Khach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ChiTietHDBan_Hang" Association="Self.FK_ChiTietHDBan_Hang">
+      <End Role="Hang" EntitySet="Hang" />
+      <End Role="ChiTietHDBan" EntitySet="ChiTietHDBan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietHDBan_HoaDonBan" Association="Self.FK_ChiTietHDBan_HoaDonBan">
+      <End Role="HoaDonBan" EntitySet="HoaDonBan" />
+      <End Role="ChiTietHDBan" EntitySet="ChiTietHDBan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDonBan_Khach" Association="Self.FK_HoaDonBan_Khach">
+      <End Role="Khach" EntitySet="Khach" />
+      <End Role="HoaDonBan" EntitySet="HoaDonBan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDonBan_NhanVien" Association="Self.FK_HoaDonBan_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="HoaDonBan" EntitySet="HoaDonBan" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

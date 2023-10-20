@@ -57,8 +57,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.lblTongTien = new System.Windows.Forms.Label();
-            this.lblBangChu = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
@@ -386,8 +384,6 @@
             // 
             this.panel4.Controls.Add(this.txtTongTien);
             this.panel4.Controls.Add(this.lblTongTien);
-            this.panel4.Controls.Add(this.lblBangChu);
-            this.panel4.Controls.Add(this.label16);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(3, 255);
             this.panel4.Name = "panel4";
@@ -411,26 +407,6 @@
             this.lblTongTien.Size = new System.Drawing.Size(72, 16);
             this.lblTongTien.TabIndex = 20;
             this.lblTongTien.Text = "Tổng Tiền:";
-            // 
-            // lblBangChu
-            // 
-            this.lblBangChu.AutoSize = true;
-            this.lblBangChu.ForeColor = System.Drawing.Color.Blue;
-            this.lblBangChu.Location = new System.Drawing.Point(9, 24);
-            this.lblBangChu.Name = "lblBangChu";
-            this.lblBangChu.Size = new System.Drawing.Size(68, 16);
-            this.lblBangChu.TabIndex = 19;
-            this.lblBangChu.Text = "Bằng Chữ:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(8, 3);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(168, 16);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Nháy đúp một dòng để xóa";
             // 
             // panel3
             // 
@@ -686,14 +662,14 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // frmHoaDonBan1
+            // frmHoaDonBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 581);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
-            this.Name = "frmHoaDonBan1";
+            this.Name = "frmHoaDonBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hóa Đơn Bán Hàng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHoaDonBan_FormClosing_1);
@@ -766,8 +742,6 @@
         private System.Windows.Forms.DataGridView dgvHoaDonBanHang;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblTongTien;
-        private System.Windows.Forms.Label lblBangChu;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Button btnIn;

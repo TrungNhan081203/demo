@@ -87,3 +87,24 @@ D:\Bai tap visual studio\DoAn\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQ
 D:\Bai tap visual studio\DoAn\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb
 D:\Bai tap visual studio\DoAn\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.ResolveComReference.cache
 D:\Bai tap visual studio\DoAn\QuanLyCuaHangQuanAo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmHoaDonBan.resources
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.exe.config
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.exe
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\bin\Debug\QUANLYQUANAO.pdb
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\bin\Debug\EntityFramework.dll
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\bin\Debug\EntityFramework.xml
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.AssemblyReference.cache
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.ResolveComReference.cache
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmDMHangHoa.resources
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmDMKhachHang.resources
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmHoaDonBan.resources
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmMain.resources
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmNhanVien.resources
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.frmTimKiemHD.resources
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.Properties.Resources.resources
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.GenerateResource.cache
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CoreCompileInputs.cache
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYCUAHANGQUANAO.csproj.CopyComplete
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.exe
+C:\QuanLyQuanAo\demo\QUANLYQUANAO\obj\Debug\QUANLYQUANAO.pdb

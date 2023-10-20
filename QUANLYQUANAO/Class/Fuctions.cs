@@ -18,11 +18,10 @@ namespace QUANLYQUANAO.Class
         public static void Connect()
         {
             Con = new SqlConnection();
-            Con.ConnectionString = "Data Source=LAPTOP-LCSO2FRU;Initial Catalog=QuanLyCuaHangQuanAo;Integrated Security=True";
+            Con.ConnectionString = "Data Source=DESKTOP-CGHDR70\\MSSQLSERVER02;Initial Catalog=QuanLyCuaHangQuanAo;Integrated Security=True";
             Con.Open();                  //Mở kết nối
-            //Kiểm tra kết nối
-           
         }
+        //Kiểm tra kết nối
         public static void Disconnect()
         {
             if (Con.State == ConnectionState.Open)

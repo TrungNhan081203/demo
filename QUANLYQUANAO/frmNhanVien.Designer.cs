@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnBoQua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -43,8 +37,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.chkGioiTinhNu = new System.Windows.Forms.CheckBox();
-            this.chkGioiTinhNam = new System.Windows.Forms.CheckBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
@@ -57,15 +49,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblDanhMucNhanVien = new System.Windows.Forms.Label();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.rdoGioiTinhNu = new System.Windows.Forms.RadioButton();
+            this.rdoGioiTinhNam = new System.Windows.Forms.RadioButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,70 +83,10 @@
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 489);
+            this.panel1.Location = new System.Drawing.Point(0, 472);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 69);
+            this.panel1.Size = new System.Drawing.Size(1007, 69);
             this.panel1.TabIndex = 3;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::QUANLYQUANAO.Properties.Resources.tru;
-            this.pictureBox6.Location = new System.Drawing.Point(850, 10);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 35);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::QUANLYQUANAO.Properties.Resources.icon_bo_qua;
-            this.pictureBox5.Location = new System.Drawing.Point(697, 10);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::QUANLYQUANAO.Properties.Resources.lưu;
-            this.pictureBox4.Location = new System.Drawing.Point(527, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::QUANLYQUANAO.Properties.Resources.iconsua;
-            this.pictureBox3.Location = new System.Drawing.Point(365, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QUANLYQUANAO.Properties.Resources.x;
-            this.pictureBox2.Location = new System.Drawing.Point(190, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QUANLYQUANAO.Properties.Resources.cong;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // btnDong
             // 
@@ -216,9 +156,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.rdoGioiTinhNu);
+            this.panel2.Controls.Add(this.rdoGioiTinhNam);
             this.panel2.Controls.Add(this.dtpNgaySinh);
-            this.panel2.Controls.Add(this.chkGioiTinhNu);
-            this.panel2.Controls.Add(this.chkGioiTinhNam);
             this.panel2.Controls.Add(this.txtSDT);
             this.panel2.Controls.Add(this.txtDiaChi);
             this.panel2.Controls.Add(this.txtTenNhanVien);
@@ -233,7 +173,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(954, 176);
+            this.panel2.Size = new System.Drawing.Size(1007, 176);
             this.panel2.TabIndex = 4;
             // 
             // dtpNgaySinh
@@ -243,26 +183,6 @@
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(302, 22);
             this.dtpNgaySinh.TabIndex = 19;
-            // 
-            // chkGioiTinhNu
-            // 
-            this.chkGioiTinhNu.AutoSize = true;
-            this.chkGioiTinhNu.Location = new System.Drawing.Point(253, 137);
-            this.chkGioiTinhNu.Name = "chkGioiTinhNu";
-            this.chkGioiTinhNu.Size = new System.Drawing.Size(46, 20);
-            this.chkGioiTinhNu.TabIndex = 18;
-            this.chkGioiTinhNu.Text = "Nữ";
-            this.chkGioiTinhNu.UseVisualStyleBackColor = true;
-            // 
-            // chkGioiTinhNam
-            // 
-            this.chkGioiTinhNam.AutoSize = true;
-            this.chkGioiTinhNam.Location = new System.Drawing.Point(123, 137);
-            this.chkGioiTinhNam.Name = "chkGioiTinhNam";
-            this.chkGioiTinhNam.Size = new System.Drawing.Size(58, 20);
-            this.chkGioiTinhNam.TabIndex = 18;
-            this.chkGioiTinhNam.Text = "Nam\r\n";
-            this.chkGioiTinhNam.UseVisualStyleBackColor = true;
             // 
             // txtSDT
             // 
@@ -291,7 +211,6 @@
             this.txtMaNhanVien.Name = "txtMaNhanVien";
             this.txtMaNhanVien.Size = new System.Drawing.Size(302, 22);
             this.txtMaNhanVien.TabIndex = 17;
-            
             // 
             // label2
             // 
@@ -372,15 +291,97 @@
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 24;
-            this.dgvNhanVien.Size = new System.Drawing.Size(954, 313);
+            this.dgvNhanVien.Size = new System.Drawing.Size(1007, 296);
             this.dgvNhanVien.TabIndex = 5;
             this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_Click);
+            // 
+            // rdoGioiTinhNu
+            // 
+            this.rdoGioiTinhNu.AutoSize = true;
+            this.rdoGioiTinhNu.Location = new System.Drawing.Point(251, 137);
+            this.rdoGioiTinhNu.Name = "rdoGioiTinhNu";
+            this.rdoGioiTinhNu.Size = new System.Drawing.Size(45, 20);
+            this.rdoGioiTinhNu.TabIndex = 23;
+            this.rdoGioiTinhNu.TabStop = true;
+            this.rdoGioiTinhNu.Text = "Nữ";
+            this.rdoGioiTinhNu.UseVisualStyleBackColor = true;
+            // 
+            // rdoGioiTinhNam
+            // 
+            this.rdoGioiTinhNam.AutoSize = true;
+            this.rdoGioiTinhNam.Location = new System.Drawing.Point(123, 137);
+            this.rdoGioiTinhNam.Name = "rdoGioiTinhNam";
+            this.rdoGioiTinhNam.Size = new System.Drawing.Size(57, 20);
+            this.rdoGioiTinhNam.TabIndex = 22;
+            this.rdoGioiTinhNam.TabStop = true;
+            this.rdoGioiTinhNam.Text = "Nam";
+            this.rdoGioiTinhNam.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::QUANLYQUANAO.Properties.Resources.tru;
+            this.pictureBox6.Location = new System.Drawing.Point(850, 10);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(33, 35);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::QUANLYQUANAO.Properties.Resources.icon_bo_qua;
+            this.pictureBox5.Location = new System.Drawing.Point(697, 10);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::QUANLYQUANAO.Properties.Resources.lưu;
+            this.pictureBox4.Location = new System.Drawing.Point(527, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::QUANLYQUANAO.Properties.Resources.iconsua;
+            this.pictureBox3.Location = new System.Drawing.Point(365, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QUANLYQUANAO.Properties.Resources.x;
+            this.pictureBox2.Location = new System.Drawing.Point(190, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QUANLYQUANAO.Properties.Resources.cong;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 558);
+            this.ClientSize = new System.Drawing.Size(1007, 541);
             this.Controls.Add(this.dgvNhanVien);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -389,15 +390,15 @@
             this.Text = "frmNhanVien";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,8 +420,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
-        private System.Windows.Forms.CheckBox chkGioiTinhNu;
-        private System.Windows.Forms.CheckBox chkGioiTinhNam;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTenNhanVien;
@@ -433,5 +432,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblDanhMucNhanVien;
         private System.Windows.Forms.DataGridView dgvNhanVien;
+        private System.Windows.Forms.RadioButton rdoGioiTinhNu;
+        private System.Windows.Forms.RadioButton rdoGioiTinhNam;
     }
 }

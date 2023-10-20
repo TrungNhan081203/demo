@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMKhachHang));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnBoQua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -53,15 +47,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblDanhMucNhanVien = new System.Windows.Forms.Label();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,85 +79,24 @@
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 350);
+            this.panel1.Location = new System.Drawing.Point(0, 454);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(941, 100);
+            this.panel1.Size = new System.Drawing.Size(941, 75);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::QUANLYQUANAO.Properties.Resources.tru;
-            this.pictureBox6.Location = new System.Drawing.Point(822, 33);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 35);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::QUANLYQUANAO.Properties.Resources.icon_bo_qua;
-            this.pictureBox5.Location = new System.Drawing.Point(669, 33);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::QUANLYQUANAO.Properties.Resources.lưu;
-            this.pictureBox4.Location = new System.Drawing.Point(499, 32);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::QUANLYQUANAO.Properties.Resources.iconsua;
-            this.pictureBox3.Location = new System.Drawing.Point(337, 33);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QUANLYQUANAO.Properties.Resources.x;
-            this.pictureBox2.Location = new System.Drawing.Point(162, 33);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QUANLYQUANAO.Properties.Resources.cong;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(819, 29);
+            this.btnDong.Location = new System.Drawing.Point(810, 17);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(87, 42);
             this.btnDong.TabIndex = 6;
             this.btnDong.Text = "Đóng";
             this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnBoQua
             // 
-            this.btnBoQua.Location = new System.Drawing.Point(666, 29);
+            this.btnBoQua.Location = new System.Drawing.Point(644, 17);
             this.btnBoQua.Name = "btnBoQua";
             this.btnBoQua.Size = new System.Drawing.Size(100, 42);
             this.btnBoQua.TabIndex = 7;
@@ -168,7 +107,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(495, 29);
+            this.btnLuu.Location = new System.Drawing.Point(490, 17);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(82, 42);
             this.btnLuu.TabIndex = 8;
@@ -179,7 +118,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(334, 29);
+            this.btnSua.Location = new System.Drawing.Point(334, 17);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(85, 42);
             this.btnSua.TabIndex = 9;
@@ -190,7 +129,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(159, 29);
+            this.btnXoa.Location = new System.Drawing.Point(172, 17);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 42);
             this.btnXoa.TabIndex = 10;
@@ -201,7 +140,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(-1, 29);
+            this.btnThem.Location = new System.Drawing.Point(33, 17);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(88, 42);
             this.btnThem.TabIndex = 11;
@@ -314,15 +253,75 @@
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
-            this.dgvKhachHang.Size = new System.Drawing.Size(941, 211);
+            this.dgvKhachHang.Size = new System.Drawing.Size(941, 315);
             this.dgvKhachHang.TabIndex = 2;
             this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellContentClick);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::QUANLYQUANAO.Properties.Resources.tru;
+            this.pictureBox6.Location = new System.Drawing.Point(813, 21);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(33, 35);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::QUANLYQUANAO.Properties.Resources.icon_bo_qua;
+            this.pictureBox5.Location = new System.Drawing.Point(647, 21);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::QUANLYQUANAO.Properties.Resources.lưu;
+            this.pictureBox4.Location = new System.Drawing.Point(494, 20);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::QUANLYQUANAO.Properties.Resources.iconsua;
+            this.pictureBox3.Location = new System.Drawing.Point(337, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QUANLYQUANAO.Properties.Resources.x;
+            this.pictureBox2.Location = new System.Drawing.Point(175, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QUANLYQUANAO.Properties.Resources.cong;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // frmDMKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 450);
+            this.ClientSize = new System.Drawing.Size(941, 529);
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -332,15 +331,15 @@
             this.Text = "Danh Mục Khách Hàng";
             this.Load += new System.EventHandler(this.frmDMKhachHang_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.ResumeLayout(false);
 
         }
